@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GhostBehaviour : MonoBehaviour {
+public class RedBehaviour : MonoBehaviour {
 
 	public Transform target;
 	private NavMeshAgent agent;
