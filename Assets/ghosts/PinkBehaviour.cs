@@ -18,12 +18,13 @@ public class PinkBehaviour : MonoBehaviour {
 		Ray looking = new Ray (player.position, player.forward);
 		RaycastHit lookat;
 		if (Physics.Raycast (looking, out lookat)) {
-
+			agent.SetDestination(lookat.point);
 
 			//Transform pinkTarget = new Transform(lookat.point);
 
 		} else {
-			Debug.LogError("player is not looking at a wall?!");
+			//this can happen when pacman is walking into the teleport. At that time, he's looking at a hole in the wall
+			//Debug.LogError("player is not looking at a wall?!");
 		}
 	}
 }
